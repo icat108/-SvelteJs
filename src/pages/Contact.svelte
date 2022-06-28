@@ -1,10 +1,10 @@
 <script>
-          import Header from "../components/Header.svelte";
-          import Footer from "../components/Footer.svelte";
+        import Header from "../components/Header.svelte";
+        import Footer from "../components/Footer.svelte";
           // When the window has finished loading create our google map below
 	google.maps.event.addDomListener(window, 'load', init);
 
-          function init() {
+        function init() {
 	// Basic options for a simple Google Map
 	
 	var mapOptions = {
