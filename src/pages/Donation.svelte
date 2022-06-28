@@ -3,7 +3,6 @@
             import { onMount } from 'svelte';
             import Header from "../components/Header.svelte";
             import Footer from "../components/Footer.svelte";
-            // import { charities } from "../charity/charities"
 
 
             export let params;
@@ -19,7 +18,7 @@
 			}
 
 			async function handleForm(event) {
-				// console.log(typeof amount)
+
 				charity.pledged = charity.pledged + parseInt(amount)
 				try {
 					const res = await fetch(`https://charity-api-bwa.herokuapp.com/charities/${params.id}`,{
@@ -60,8 +59,6 @@
         </style>
 
     <Header />    
-    <!-- welcome section -->
-	<!--breadcumb start here-->
     {#if charity}
 	<section class="xs-banner-inner-section parallax-window" style=
 	"background-image:url('/assets/images/about_bg.png')">
@@ -77,9 +74,9 @@
 	</ul>
 	</div>
 	</div>
-	</section><!--breadcumb end here--><!-- End welcome section -->
+	</section>
 	<main class="xs-main">
-	<!-- donation form section -->
+	
 	<section class="xs-section-padding bg-gray">
 	<div class="container">
 	<div class="row">
@@ -97,7 +94,7 @@
 	us</span>" site. By calling <span class=
 	"color-green">+44(0) 800 883 8450</span>.</p><span class=
 	"xs-separetor v2"></span>
-	</div><!-- .xs-heading end -->
+	</div>
 	<form on:submit|preventDefault={handleForm} action="#" method="post" id="xs-donation-form" class=
 	"xs-donation-form" name="xs-donation-form">
 	<div class="xs-input-group">

@@ -8,6 +8,7 @@
 	import Footer from '../components/Footer.svelte'
 
 	// import { charities } from '../data/charities.js';
+	// <img src="assets/images/slide1.png" alt="" />
 
 	let title = "Richs";
 	let charities = [];
